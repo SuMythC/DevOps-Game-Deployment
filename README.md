@@ -1,3 +1,8 @@
+# DevOps CICD wiht jenkins, github, maven, sonarqube, nexus, docker, kubernetes and mail after job compete or fail
+![Diagram](https://github.com/user-attachments/assets/4a9f9705-4be8-4520-b636-717ca6bc0af3)
+
+
+
 # BoardgameListingWebApp
 
 ## Description
