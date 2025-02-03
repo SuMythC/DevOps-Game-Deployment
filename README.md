@@ -6,7 +6,13 @@ This repository demonstrates the setup and configuration of a full DevOps CI/CD 
 ![Pipeline Architecture](https://github.com/user-attachments/assets/4a9f9705-4be8-4520-b636-717ca6bc0af3)
 
 ## Note
+
 All the necessary code for setting up Jenkins and Kubernetes, including configuration files and scripts, are provided in this repository. Please check the relevant folders for detailed setup instructions.
+
+This code was sourced from publicly available repositories on GitHub for use in this DevOps project. Unfortunately, the exact source and user from whom it was taken are unknown. If you recognize the code, please feel free to reach out so I can properly credit the original author.
+
+Thank you.
+
 
 ## Credentials
 The following credentials are needed throughout the setup and integration process:
