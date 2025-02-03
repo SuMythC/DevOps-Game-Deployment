@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  
+  <!-- Local Repository -->
+  <localRepository>/var/lib/jenkins/workspace/game/</localRepository>
+
+  <!-- Interactive Mode -->
+  <interactiveMode>true</interactiveMode>
+  
+  <!-- Offline Mode -->
+  <offline>false</offline>
+
+  <!-- Plugin Groups -->
+  <pluginGroups>
+    <pluginGroup>com.your.plugins</pluginGroup>
+  </pluginGroups>
+
+  <!-- Proxies -->
+  <proxies>
+    <!-- Additional proxies can be defined here if required -->
+  </proxies>
+
+  <!-- Authentication Servers -->
+  <servers>
+    <server>
+      <id>maven-releases</id>
+      <username>NEXUS_USERNAME</username>
+      <password>NEXUS_PASSWORD</password>
+    </server>
+    <server>
+      <id>maven-snapshots</id>
+      <username>NEXUS_USERNAME</username>
+      <password>NEXUS_PASSWORD</password>
+    </server>
+  </servers>
+
+  <!-- Mirrors -->
+  <mirrors>
+    <!-- Define mirrors if needed -->
+  </mirrors>
+  
+  <!-- Profiles -->
+  <profiles>
+    <profile>
+      <id>jdk-1.4</id>
+      <activation>
+        <jdk>1.4</jdk>
+      </activation>
+      <repositories>
+        <repository>
+          <id>jdk14</id>
+          <name>Repository for JDK 1.4 builds</name>
+          <url>http://www.myhost.com/maven/jdk14</url>
+          <layout>default</layout>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+        </repository>
+      </repositories>
+    </profile>
+
+    <profile>
+      <id>env-dev</id>
+      <activation>
+        <property>
+          <name>target-env</name>
+          <value>dev</value>
+        </property>
+      </activation>
+      <properties>
+        <tomcatPath>/path/to/tomcat/instance</tomcatPath>
+      </properties>
+    </profile>
+  </profiles>
+
+  <!-- Active Profiles -->
+  <activeProfiles>
+    <activeProfile>alwaysActiveProfile</activeProfile>
+    <activeProfile>anotherAlwaysActiveProfile</activeProfile>
+  </activeProfiles>
+</settings>
